@@ -1,21 +1,50 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Pizza AR Viewer</title>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <style>
-      body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background: #000; }
-      model-viewer { width: 90%; height: 90vh; }
-    </style>
-  </head>
-  <body>
-    <model-viewer 
-      src="Pizza.glb"
-      ar 
-      ar-modes="scene-viewer quick-look webxr"
-      camera-controls 
-      auto-rotate 
-      alt="Pizza 3D Model">
-    </model-viewer>
-  </body>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pizza AR</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff6ee;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #d84315;
+    }
+
+    button {
+      font-size: 1.2em;
+      padding: 15px 30px;
+      background-color: #ff7043;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #f4511e;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🍕 ¡Mira tu Pizza en AR!</h1>
+
+  <a href="intent://arvr.google.com/scene-viewer/1.0?file=https://arcondra32.github.io/Pizza-ensayo/Pizza2.glb&mode=ar_preferred#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://arcondra32.github.io/Pizza-ensayo/;end;">
+    <button>📱 Ver con cámara</button>
+  </a>
+
+</body>
 </html>
